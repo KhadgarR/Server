@@ -59,6 +59,7 @@ int main(int argc, char* argv[])
 
   //TODO: выделить отдельный поток под прослушивание сокета и не загружать основной,
   //в мэин потоке будет выводить лишь статистика по подключениям.
+  //изменится основной цикл, будет использоваться epoll
   while( (client_sock = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&len)) )
   {
     requests->add_request(client_sock);
