@@ -1,5 +1,4 @@
-#include <stdio.h>             /* standard I/O routines                      */
-//#define __USE_GNU
+#include <stdio.h>
 #include <pthread.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -8,7 +7,7 @@
 #include<string.h>
 #include<sys/socket.h>
 #include<arpa/inet.h>
-#include<pthread.h> //for threading , link with lpthread
+#include<pthread.h>
 
 #include "requests_queue.h"
 #include "handler_thread.h"

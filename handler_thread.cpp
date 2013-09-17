@@ -1,12 +1,11 @@
-#include <stdio.h>       /* standard I/O routines                     */
-#include <pthread.h>     /* pthread functions and data structures     */
-#include <stdlib.h>      /* malloc() and free()                       */
-#include <assert.h>      /* assert()                                  */
+#include <stdio.h>
+#include <pthread.h>
+#include <stdlib.h>
+#include <assert.h>
 
-#include "handler_thread.h"   /* handler thread functions/structs     */
+#include "handler_thread.h"
 
-extern int done_creating_requests;   /* are we done creating new requests? */
-
+extern int done_creating_requests;
 
 HandlerThreadPparams::HandlerThreadPparams(int thr_id, pthread_mutex_t* p_mutex, pthread_cond_t* p_cond_var, Requests_queue* queue)
 {

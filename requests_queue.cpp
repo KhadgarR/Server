@@ -1,7 +1,7 @@
-#include <stdlib.h>      /* malloc() and free()                       */
-#include <assert.h>      /* assert()                                  */
+#include <stdlib.h>
+#include <assert.h>
 
-#include "requests_queue.h"      /* requests queue functions and structs */
+#include "requests_queue.h"
 
 //---------------------------------------------------------------------------
 
@@ -96,18 +96,4 @@ int Requests_queue::get_requests_number()
     rc = pthread_mutex_unlock(m_pMutex);
     return num;
 }
-//---------------------------------------------------------------------------
-/*
-void Requests_queue::delete_requests_queue()
-{
-    struct request* a_request;
-
-    while (num_requests > 0)
-    {
-	a_request = get_request();
-	free(a_request);
-    }
-
-    free(queue);
-}*/
 //---------------------------------------------------------------------------
